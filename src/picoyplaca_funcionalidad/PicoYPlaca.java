@@ -18,7 +18,7 @@ public class PicoYPlaca {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         new MainPage().setVisible(true);//mostramos la pantalla principal
+         new MainPage().setVisible(true);//show the main page
     }
     
 }

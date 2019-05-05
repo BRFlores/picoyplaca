@@ -22,15 +22,15 @@ public class PicoYPlacaSystem {
 
    //This function allows to validate the plate entered by the user because it must be only 6 or 7 digits
    public void plateValidator(JTextField TextField_plate, JLabel Label_error1, JLabel Label_error2, JLabel Label_results) {
-        String plateNumber=(TextField_plate.getText());//We get the string of the plate entered by the user
-            if(plateNumber.length()==6){ //We increased a character to the string to identify when the length of the plate was only 6 digits
+        String plateNumber=(TextField_plate.getText());//we get the string of the plate entered by the user
+            if(plateNumber.length()==6){ //we increased a character to the string to identify when the length of the plate was only 6 digits
                plateNumber=plateNumber+"0";
             }
-        char [] plateCharacters= plateNumber.toCharArray();// We transform the text of the plate into an array in order to validate the board
-            if(plateCharacters.length==6){ //If the plate was only 6 digits then it has a 0 at the end of the array which must be replaced by the previous digit which will serve to determine whether or not there is pico y placa
+        char [] plateCharacters= plateNumber.toCharArray();// we transform the text of the plate into an array in order to validate the board
+            if(plateCharacters.length==6){ //if the plate was only 6 digits then it has a 0 at the end of the array which must be replaced by the previous digit which will serve to determine whether or not there is pico y placa
                plateCharacters[6]=plateCharacters[5];        
             } 
-            if (plateCharacters.length==7){  // This condition will only be executed when the user types a complete plate, otherwise the error messages will be displayed
+            if (plateCharacters.length==7){  // this condition will only be executed when the user types a complete plate, otherwise the error messages will be displayed
                 validatorWithPatterns(0,0,2,Label_error1,Label_error2,TextField_plate,"[a-zA-Z]", Label_results); //We call validatorPatterns function
                 validatorWithPatterns(0,3,6,Label_error1,Label_error2,TextField_plate,"[0-9]", Label_results);
             }
@@ -46,7 +46,7 @@ public class PicoYPlacaSystem {
        if(plateNumber.length()==6){ //here add a letter when the plate is only with 6 digits
           plateNumber=plateNumber+"0";
         }    
-       char [] plateCharacters= plateNumber.toCharArray();// We transform the text of the plate into an array in order to validate the board
+       char [] plateCharacters= plateNumber.toCharArray();// we transform the text of the plate into an array in order to validate the board
        Pattern patternLettersAndNumbers= Pattern.compile(patternNumbersOrLetters); //we will use the patterns function to make sure that the first 3 digits of the plate are uppercase or lowercase letters and the rest are only numbers through regular expressions
        Matcher matcher;// the matcher will compare the string
        for(iterator= firstValue; iterator <= lastValue;iterator++){ //we will compare each digit of the plate
@@ -63,10 +63,10 @@ public class PicoYPlacaSystem {
                 }
         }
    }
-    //this function will verify the conditions of pico y placa according with the last digit of the plate
+    //This function will verify the conditions of pico y placa according with the last digit of the plate
    public void verificacionDeRestriccion(JDateChooser Calendar, JComboBox<String> ComboBox_schedules,JTextField TextField_plate,JLabel Label_results, JLabel Label_error1, JLabel Label_error2) {
-        int dayOfWeek=Calendar.getCalendar().getTime().getDay();//The day of week is an int value from 0 to 6, where 0 is sunday, 1 is monday, 2 is tuesday, 3 is wednesday, 4 is thursday, 5 is friday and 6 is saturday
-        String plateNumber=(TextField_plate.getText());//We obtain the plate of the text field
+        int dayOfWeek=Calendar.getCalendar().getTime().getDay();//the day of week is an int value from 0 to 6, where 0 is sunday, 1 is monday, 2 is tuesday, 3 is wednesday, 4 is thursday, 5 is friday and 6 is saturday
+        String plateNumber=(TextField_plate.getText());//we obtain the plate of the text field
         int lastPlateNumber=0;// here is stored te last number of the plate
         if(plateNumber.length()==6){ //we add a digit if the plate was only to 6 digits
            plateNumber=plateNumber+"b";
@@ -125,7 +125,7 @@ public class PicoYPlacaSystem {
  }
   
  }
-   //this function will establish the relations between the plates an days of restrictions
+   //This function will establish the relations between the plates an days of restrictions
    public void verificationResults(int lastPlateNumber1, int lastPlateNumber2, JLabel Label_results, JComboBox<String> ComboBox_schedules, JLabel Label_error1,JLabel Label_error2, JTextField TextField_plate,JDateChooser Calendar){
         String plateNumber=(TextField_plate.getText());
         int lastPlateNumber=0;// here it is stored te last number of the plate
