@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package picoyplaca_interfazgrafica;
+package picoyplaca_graphicinterface;
 import java.util.Date;
-import picoyplaca_funcionalidad.PicoYPlacaSystem;
+import picoyplaca_functionality.PicoYPlacaSystem;
 
 
 

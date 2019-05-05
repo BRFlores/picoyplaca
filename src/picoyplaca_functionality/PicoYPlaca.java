@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package picoyplaca_funcionalidad;
+package picoyplaca_functionality;
 
-import picoyplaca_interfazgrafica.MainPage;
+import picoyplaca_graphicinterface.MainPage;
 
 /**
  *
