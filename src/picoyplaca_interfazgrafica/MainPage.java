@@ -3,28 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package picoyplaca;
-
+package picoyplaca_interfazgrafica;
 import java.util.Date;
-
-/**
- *
- * @author ASUS
- */
+import picoyplaca_funcionalidad.PicoYPlacaSystem;
 
 
-public class PaginaPrincipal extends javax.swing.JFrame {
+
+public class MainPage extends javax.swing.JFrame {
 
     /**
      * Creates new form PaginaPrincipal
      */
-    public PaginaPrincipal() {
+    public MainPage() {
         initComponents();
-        setLocationRelativeTo(this); // muestra el programa en el centro de la pantalla
-        this.Label_error1.setVisible(false); //Al inicio no son visibles los mensajes de placa incorrecta
+        setLocationRelativeTo(this); //we show the interface in the middle of the display
+        this.Label_error1.setVisible(false); //at first the error messages will be disabled
         this.Label_error2.setVisible(false);
         Date now = new Date();
-        this.Calendario.setDate(now);
+        this.Calendar.setDate(now); // we set the calendary with the actual date
     }
 
     /**
@@ -36,52 +32,58 @@ public class PaginaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Label_titulo = new javax.swing.JLabel();
-        Label_informacionplaca = new javax.swing.JLabel();
+        Label_title = new javax.swing.JLabel();
+        Label_plateinformation = new javax.swing.JLabel();
         Label_error1 = new javax.swing.JLabel();
-        TextField_placa = new javax.swing.JTextField();
+        TextField_plate = new javax.swing.JTextField();
         Label_error2 = new javax.swing.JLabel();
-        Label_informacioncalendario = new javax.swing.JLabel();
-        Calendario = new com.toedter.calendar.JDateChooser();
-        Label_informacionhorario = new javax.swing.JLabel();
-        ComboBox_horarios = new javax.swing.JComboBox<>();
-        Boton_verificacion = new javax.swing.JButton();
-        Label_resultados = new javax.swing.JLabel();
+        Label_calendarinformation = new javax.swing.JLabel();
+        Calendar = new com.toedter.calendar.JDateChooser();
+        Label_sheduleinformation = new javax.swing.JLabel();
+        ComboBox_schedule = new javax.swing.JComboBox<String>();
+        Button_verify = new javax.swing.JButton();
+        Label_results = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Label_titulo.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        Label_titulo.setForeground(new java.awt.Color(204, 0, 255));
-        Label_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Label_titulo.setText("SISTEMA DE VALIDACIÓN DE PICO Y PLACA");
+        Label_title.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        Label_title.setForeground(new java.awt.Color(204, 0, 255));
+        Label_title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Label_title.setText("SISTEMA DE VALIDACIÓN DE PICO Y PLACA");
 
-        Label_informacionplaca.setText("Ingrese el número de placa. Ejemplo PBD3212");
+        Label_plateinformation.setText("Ingrese el número de placa. Ejemplo PBD3212");
 
         Label_error1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Label_error1.setForeground(new java.awt.Color(255, 0, 0));
         Label_error1.setText("El numero de placa es incorrecto !!!");
 
+        TextField_plate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextField_plateActionPerformed(evt);
+            }
+        });
+
         Label_error2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Label_error2.setForeground(new java.awt.Color(255, 0, 0));
         Label_error2.setText("*");
 
-        Label_informacioncalendario.setText("Eliga una fecha");
+        Label_calendarinformation.setText("Eliga una fecha");
 
-        Label_informacionhorario.setText("Elija un horario");
+        Label_sheduleinformation.setText("Elija un horario");
 
-        ComboBox_horarios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00h00-06h59", "07h00-09h30", "09h31-15h59", "16h00-19h30", "19h31-23h59" }));
+        ComboBox_schedule.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00h00-06h59", "07h00-09h30", "09h31-15h59", "16h00-19h30", "19h31-23h59" }));
 
-        Boton_verificacion.setBackground(new java.awt.Color(255, 204, 0));
-        Boton_verificacion.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        Boton_verificacion.setForeground(new java.awt.Color(102, 102, 102));
-        Boton_verificacion.setText("VERIFICAR");
-        Boton_verificacion.addActionListener(new java.awt.event.ActionListener() {
+        Button_verify.setBackground(new java.awt.Color(255, 204, 0));
+        Button_verify.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        Button_verify.setForeground(new java.awt.Color(102, 102, 102));
+        Button_verify.setText("VERIFICAR");
+        Button_verify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_verificacionActionPerformed(evt);
+                Button_verifyActionPerformed(evt);
             }
         });
 
-        Label_resultados.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Label_results.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,20 +100,20 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Calendario, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Label_informacioncalendario))
+                                            .addComponent(Calendar, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Label_calendarinformation))
                                         .addGap(44, 44, 44)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Label_informacionhorario)
-                                            .addComponent(ComboBox_horarios, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(Label_informacionplaca))
+                                            .addComponent(Label_sheduleinformation)
+                                            .addComponent(ComboBox_schedule, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(Label_plateinformation))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 48, Short.MAX_VALUE)
-                                .addComponent(Label_titulo)))
+                                .addComponent(Label_title)))
                         .addGap(23, 23, 23))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(TextField_placa, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TextField_plate, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Label_error1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
@@ -119,50 +121,54 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(178, 178, 178)
-                        .addComponent(Boton_verificacion))
+                        .addComponent(Button_verify))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(120, 120, 120)
-                        .addComponent(Label_resultados, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Label_results, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(Label_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Label_title, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Label_informacionplaca)
+                .addComponent(Label_plateinformation)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(TextField_placa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextField_plate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Label_error1)
                             .addComponent(Label_error2))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Label_informacionhorario)
-                            .addComponent(Label_informacioncalendario, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(Label_sheduleinformation)
+                            .addComponent(Label_calendarinformation, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Calendario, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(ComboBox_horarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Calendar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ComboBox_schedule, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(Boton_verificacion)
+                .addComponent(Button_verify)
                 .addGap(18, 18, 18)
-                .addComponent(Label_resultados, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Label_results, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Boton_verificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_verificacionActionPerformed
+    private void Button_verifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_verifyActionPerformed
         // TODO add your handling code here:
-    SistemaPicoYPlaca sistema = new SistemaPicoYPlaca();
-    sistema.validacionPlaca(this.TextField_placa, this.Label_error1, this.Label_error2);
-    sistema.verificacionDeRestriccion(this.Calendario, this.ComboBox_horarios, this.TextField_placa, this.Label_resultados, this.Label_error1, this.Label_error2);
+        PicoYPlacaSystem sistema = new PicoYPlacaSystem(); // We initialize the class to run the functions created in PicoYPlacaSystem
+        sistema.plateValidator(this.TextField_plate, this.Label_error1, this.Label_error2, this.Label_results);
+        sistema.verificacionDeRestriccion(this.Calendar, this.ComboBox_schedule, this.TextField_plate, this.Label_results, this.Label_error1, this.Label_error2);
   
-    }//GEN-LAST:event_Boton_verificacionActionPerformed
+    }//GEN-LAST:event_Button_verifyActionPerformed
+
+    private void TextField_plateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextField_plateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextField_plateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,35 +187,36 @@ public class PaginaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PaginaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PaginaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PaginaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PaginaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PaginaPrincipal().setVisible(true);
+                new MainPage().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Boton_verificacion;
-    private com.toedter.calendar.JDateChooser Calendario;
-    private javax.swing.JComboBox<String> ComboBox_horarios;
+    private javax.swing.JButton Button_verify;
+    private com.toedter.calendar.JDateChooser Calendar;
+    private javax.swing.JComboBox<String> ComboBox_schedule;
+    private javax.swing.JLabel Label_calendarinformation;
     private javax.swing.JLabel Label_error1;
     private javax.swing.JLabel Label_error2;
-    private javax.swing.JLabel Label_informacioncalendario;
-    private javax.swing.JLabel Label_informacionhorario;
-    private javax.swing.JLabel Label_informacionplaca;
-    private javax.swing.JLabel Label_resultados;
-    private javax.swing.JLabel Label_titulo;
-    private javax.swing.JTextField TextField_placa;
+    private javax.swing.JLabel Label_plateinformation;
+    private javax.swing.JLabel Label_results;
+    private javax.swing.JLabel Label_sheduleinformation;
+    private javax.swing.JLabel Label_title;
+    private javax.swing.JTextField TextField_plate;
     // End of variables declaration//GEN-END:variables
 }

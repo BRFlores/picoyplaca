@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package picoyplaca;
+package picoyplaca_funcionalidad;
+
+import picoyplaca_interfazgrafica.MainPage;
 
 /**
  *
@@ -16,7 +18,7 @@ public class PicoYPlaca {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         new PaginaPrincipal().setVisible(true);//mostramos la pantalla principal
+         new MainPage().setVisible(true);//mostramos la pantalla principal
     }
     
 }

@@ -34,28 +34,28 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="Calendario" min="-2" pref="156" max="-2" attributes="0"/>
-                                          <Component id="Label_informacioncalendario" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Calendar" min="-2" pref="156" max="-2" attributes="0"/>
+                                          <Component id="Label_calendarinformation" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="Label_informacionhorario" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ComboBox_horarios" min="-2" pref="149" max="-2" attributes="0"/>
+                                          <Component id="Label_sheduleinformation" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ComboBox_schedule" min="-2" pref="149" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="Label_informacionplaca" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Label_plateinformation" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
-                              <Component id="Label_titulo" min="-2" max="-2" attributes="0"/>
+                              <Component id="Label_title" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="TextField_placa" min="-2" pref="124" max="-2" attributes="0"/>
+                      <Component id="TextField_plate" min="-2" pref="124" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="Label_error1" min="-2" pref="262" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -66,11 +66,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
-                      <Component id="Boton_verificacion" min="-2" max="-2" attributes="0"/>
+                      <Component id="Button_verify" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                      <Component id="Label_resultados" min="-2" pref="223" max="-2" attributes="0"/>
+                      <Component id="Label_results" min="-2" pref="223" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -81,38 +81,38 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Component id="Label_titulo" min="-2" pref="22" max="-2" attributes="0"/>
+              <Component id="Label_title" min="-2" pref="22" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="Label_informacionplaca" min="-2" max="-2" attributes="0"/>
+              <Component id="Label_plateinformation" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="TextField_placa" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TextField_plate" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Label_error1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Label_error2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Label_informacionhorario" min="-2" max="-2" attributes="0"/>
-                          <Component id="Label_informacioncalendario" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="Label_sheduleinformation" min="-2" max="-2" attributes="0"/>
+                          <Component id="Label_calendarinformation" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="Calendario" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="Calendar" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="ComboBox_horarios" min="-2" max="-2" attributes="0"/>
+                  <Component id="ComboBox_schedule" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="Boton_verificacion" min="-2" max="-2" attributes="0"/>
+              <Component id="Button_verify" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="Label_resultados" min="-2" pref="39" max="-2" attributes="0"/>
+              <Component id="Label_results" min="-2" pref="39" max="-2" attributes="0"/>
               <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="Label_titulo">
+    <Component class="javax.swing.JLabel" name="Label_title">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="18" style="3"/>
@@ -124,7 +124,7 @@
         <Property name="text" type="java.lang.String" value="SISTEMA DE VALIDACI&#xd3;N DE PICO Y PLACA"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="Label_informacionplaca">
+    <Component class="javax.swing.JLabel" name="Label_plateinformation">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingrese el n&#xfa;mero de placa. Ejemplo PBD3212"/>
       </Properties>
@@ -140,7 +140,10 @@
         <Property name="text" type="java.lang.String" value="El numero de placa es incorrecto !!!"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="TextField_placa">
+    <Component class="javax.swing.JTextField" name="TextField_plate">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextField_plateActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="Label_error2">
       <Properties>
@@ -153,19 +156,19 @@
         <Property name="text" type="java.lang.String" value="*"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="Label_informacioncalendario">
+    <Component class="javax.swing.JLabel" name="Label_calendarinformation">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliga una fecha"/>
       </Properties>
     </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="Calendario">
+    <Component class="com.toedter.calendar.JDateChooser" name="Calendar">
     </Component>
-    <Component class="javax.swing.JLabel" name="Label_informacionhorario">
+    <Component class="javax.swing.JLabel" name="Label_sheduleinformation">
       <Properties>
         <Property name="text" type="java.lang.String" value="Elija un horario"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="ComboBox_horarios">
+    <Component class="javax.swing.JComboBox" name="ComboBox_schedule">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="5">
@@ -181,7 +184,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="Boton_verificacion">
+    <Component class="javax.swing.JButton" name="Button_verify">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="cc" red="ff" type="rgb"/>
@@ -195,10 +198,10 @@
         <Property name="text" type="java.lang.String" value="VERIFICAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_verificacionActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_verifyActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="Label_resultados">
+    <Component class="javax.swing.JLabel" name="Label_results">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="1"/>
